@@ -6,18 +6,28 @@ Experimental repository for implementing change tracking in a JavaScrpt library.
 
 1. Leverage a library which performs object graph traversal
 
-2. Implement a strategy pattern
-  - Traverser should invoke a callback method
-  - Callback arguments:
-    + Object reference
-    + Result of property iteration
-      
+2. Implement a strategy pattern:
+  - Two callback methods called for each node
+  - Callback 1: Process Node
+    + Some work on the node
+    + Argument(s): object reference
+    + Return: result
+  - Notify Result
+    + Argument(s): object reference, result of Process Node
+
 3. Change Tracker
-  - Passes object graph to object traverser
-  - Provides callback method
-  - On callback, should construct change state object
-  
-4. Change State
+  - Start tracking
+    + Pass object root to graph traverser
+    + Pass callbacks:
+      - Iterate properties, construct state snapshot
+  - Detect changes
+
+4. State Snapshot
+  - Object reference
+  - Dictionary of property names and values
+  - Snapshots for reference and collection properties
+
+5. Change State
   - Reference to object
   - Dictionary: property names and values
   
