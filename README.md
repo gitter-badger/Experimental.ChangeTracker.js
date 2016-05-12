@@ -1,5 +1,7 @@
 # Experimental.ChangeTracker.js
 
+[![Join the chat at https://gitter.im/TrackableEntities/Experimental.ChangeTracker.js](https://badges.gitter.im/TrackableEntities/Experimental.ChangeTracker.js.svg)](https://gitter.im/TrackableEntities/Experimental.ChangeTracker.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Experimental repository for implementing change tracking in a JavaScrpt library.
 
 ## Design goals
